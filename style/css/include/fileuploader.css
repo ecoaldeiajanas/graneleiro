@@ -1,0 +1,29 @@
+.qq-uploader { position:relative; width: 100%;}
+
+.qq-upload-drop-area {
+     height:100%; padding:20px; z-index:2; text-align:center; border: #CCC dashed 6px;
+     background:white; 
+}
+.qq-upload-drop-area .uploadText {
+    display:block; padding-bottom: 13px; font-size: 0.8em;
+}
+.qq-upload-drop-area-active { background:#EEE;}
+
+.qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-failed-text {
+    margin-right: 7px;
+}
+
+.qq-upload-file {}
+.qq-upload-spinner {display:inline-block; background: url("../images/loading.gif"); width:15px; height:15px; vertical-align:text-bottom;}
+.qq-upload-size,.qq-upload-cancel {font-size:11px;}
+
+.qq-upload-failed-text {display:none;}
+.qq-upload-fail .qq-upload-failed-text {display:inline;}
+
+.qq-upload-button input{ width:100%;height:100%; }
+
+.upload-zone{ margin-top:15px; }
+.upload-zone img { height:100%; width:auto;}
+.upload-zone .loading { height:16px; width:16px; display:inline-block;}
+.upload-zone div { display: inline-block; vertical-align:top; margin: 10px;font-size: .8em; line-height:1.7em; }
+.upload-zone div b { font-size: 1.9em; }

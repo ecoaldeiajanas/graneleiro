@@ -1,0 +1,10 @@
+body.LnR{ background-color: #241818; background-image:none;}
+.LnR { color:#DEC05D; }
+.LnR .header{ margin:0 auto; width:1000px; height:160px; background-image: url(../images/LnR/logoTop.png); background-repeat: no-repeat; height: 241px; background-position: -140px 100%;} 
+.LnR .bottomShade {margin:0 auto; background-image: url(../images/LnR/bottomShade.png); width:1000px; height:20px; } 
+.LnR span{ width:150px; display: inline-block;font-size: 1.1em;font-weight: lighter; padding-right:10px; }
+.LnR input{ padding:8px; margin-bottom: 5px;}
+.LnR h1 { text-align: center; margin: 70px 0px 10px; font-size: 1.8em; }
+.LnR .formLine { text-align: right; }
+.LnR .enterBut {  position: relative; left: 8px; top: 12px; background-image: url(../images/LnR/enterBut.png); width:22px; height:29px; }
+.LnR .cuteMessage { width: 147px; font-size: 1.1em; padding-left: 10px; text-align: left; font-weight: normal;} 

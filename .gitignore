@@ -1,0 +1,4 @@
+error_log
+DB
+testdb.php
+storescripts/connectMysql.php
