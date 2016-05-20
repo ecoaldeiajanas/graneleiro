@@ -223,7 +223,7 @@ $(function() {
         
       </div>
       </div>
-      
+      <a href="#" class="scrollup-link"><div class="scrollup-inside hidden"><span class="glyphicon glyphicon-chevron-up"></span></div></a>
         <?php require_once("../includes/core/footer.php"); ?>
     </div>
     

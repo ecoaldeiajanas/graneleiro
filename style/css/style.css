@@ -296,3 +296,19 @@ label.error { float: none; color: red; margin: 0 .5em 0 0; vertical-align: top; 
 .CSSTableGenerator tr:first-child td:last-child{
 	border-width:0px 0px 1px 1px;
 }
+div.scrollup-inside {
+	position: fixed;
+	right: 20px;
+	bottom: 80px;
+	background: white url(images/glossyback.gif);
+	padding: 10px;
+	color: #fff;
+	/*border: 1px solid black;*/
+}
+div.scrollup-link:inside {
+	background: white url(images/glossyback2.gif);
+	color: #fff;
+}
+.scrollup-inside span{
+	font-size: 30px;
+}
