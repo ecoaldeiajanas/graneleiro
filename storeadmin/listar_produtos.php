@@ -124,6 +124,7 @@ $(function() {
 	        "iDisplayLength": 10,
 	        "sAjaxSource": "../ajax/aj_getProdutos.php",
 	        "fnInitComplete": function(oSettings, json) {
+	        	console.log(json);
 				 ////////////////////Details/////////////////
 	        	$(".imgPreviewBut1").live('click',function(){
 	        		if($(this).next().is(":visible")){
@@ -475,7 +476,7 @@ Ex( Alface, abobora, mólho de Salsa, mólho de Manjericão, etc ...)"/>
 	<button id="editProdutoBut" class="edBut">Modificar</button>
 	<button id="deleteProdutoBut" class="delBut">Remover</button>
 </div>
-        <h2>Lista de Produtos</h2><hr/>       		
+        <h2>Lista de Produtos</h2><a class="" href="exportar_produtos_excel.php">EXCEL</a><hr/>       		
 				<table cellpadding="0" cellspacing="0" border="0" class="display" id="produtos" width="100%">
     <thead>
         <tr>
