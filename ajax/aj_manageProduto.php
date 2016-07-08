@@ -96,8 +96,14 @@
 		$q = $conDB->sql_query("UPDATE products SET cultura='Orgânico' WHERE id='$id'");
 		$cultura ="Orgânico";
 	}elseif(@$_POST["prot"]){
+		$q = $conDB->sql_query("UPDATE products SET cultura='Integrada​' WHERE id='$id'");
+		$cultura ="Integrada​";
+	}elseif(@$_POST["protrad"]){
 		$q = $conDB->sql_query("UPDATE products SET cultura='Tradicional' WHERE id='$id'");
 		$cultura ="Tradicional";
+	}elseif(@$_POST["prodconv"]){
+		$q = $conDB->sql_query("UPDATE products SET cultura='Convencional' WHERE id='$id'");
+		$cultura ="Convencional";
 	}else{
 		$q = $conDB->sql_query("UPDATE products SET cultura='' WHERE id='$id'");
 		$cultura ="";
