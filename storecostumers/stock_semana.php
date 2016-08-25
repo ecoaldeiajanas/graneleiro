@@ -26,7 +26,7 @@ if ($logged) {
 <?php
 // Verificar se site está bloqueado
     $sql=mysql_query("SELECT * FROM block  LIMIT 1");
-    
+
 while ($row=mysql_fetch_array($sql)) {
     $block=$row['block'];
 }
@@ -43,15 +43,15 @@ while ($row=mysql_fetch_array($sql)) {
     $id_category=$row['id_category'];
     $category=$row['category'];
     @$idCat=$_GET['idCat'];
-        
-        
+
+
     //$category_list.='<ul>';
     if ($idCat==$id_category) {
         $category_list.='<li style="padding: 15px 0;padding-left: 10px; "><b>'.$category.'</b></li>';
     } else {
         $category_list.='<li><a href="stock_semana.php?idCat='.$id_category.'">'.$category.'</a></li>';
     }
-            
+
     //$category_list.='</ul>';
 }
 ?>
@@ -112,8 +112,8 @@ if ($productCount>0) {
             $pagina="#";
             $encomendar='<img src="../p_images/esgotado.png" width="130" height="40" />';
         }
-        
-        @$dynamicListT.='<table width="100%" border="0" cellspacing="0" cellpadding="0" id="pid'.$id.'">	
+
+        @$dynamicListT.='<table width="100%" border="0" cellspacing="0" cellpadding="0" id="pid'.$id.'">
   <tr>
     <th colspan="3" scope="col" align="left"><p style="max-height:10px; min-height:10px;"><b>'.$product_name.'</b></p><br/></th>
   </tr>
@@ -138,14 +138,14 @@ if ($productCount>0) {
       .button()
       $("comprar").click(function( event ) {
         event.preventDefault();
-      });    
+      });
   });
 $(function() {
     $( "input[type=button]" )
       .button()
       $("esgotado").click(function( event ) {
         event.preventDefault();
-      });    
+      });
   });
   </script>
 <div id="motherContainer">
@@ -154,11 +154,11 @@ $(function() {
             <!--<div class="heading"><h1><a href="index.php">QUEM SOMOS</a></h1></div>
             <div class="heading"><?php if ($existEnc>0) {?>
                                     <h1><a href="#">STOCK DA SEMANA</a></h1></div>
-                                        
+
                                     <?php } else {?>
                                     <?php if ($existEnc>0) {?>
                                     <h1><a href="#">STOCK DA SEMANA</a></h1></div>
-                                        
+
                                     <?php } else {?>
                                     <h1><a href="stock_semana.php?idCat=1">STOCK DA SEMANA</a></h1></div>
                                     <?php }?>
@@ -169,7 +169,7 @@ $(function() {
           <li><h1><a href="index.php">QUEM SOMOS</a></h1></li>
                 <?php if ($existEnc>0) {?>
                                         <li><h1><a href="#">STOCK DA SEMANA</a></h1></li>
-                                        
+
                                     <?php } else {?>
                                     <li><h1><a href="stock_semana.php">STOCK DA SEMANA</a></h1></li>
                                     <?php }?>
@@ -206,7 +206,7 @@ $(function() {
     </p>
     <div   style="width:230px;float:left;">
     <div align="left" style="margin-left:5px ">
-    
+
     <ul id="verticalmenu" class="glossymenu">
 <li><?php  echo $category_list;?></li>
 </ul>
@@ -214,17 +214,18 @@ $(function() {
     </div>
          <div id="productsww" style="width:720px;float:left;margin-left:30px ;">
         <?php echo $dynamicListT; ?>
-      
+
     <?php } else {?>
         <div id="productsww" style="width:900px;float:left;margin-left:50px; margin-right:50px;">
-     
+
         <?php echo $dynamicListT;
 }?>
         
       </div>
       </div>
       <a href="#" class="scrollup-link"><div class="scrollup-inside hidden"><span class="glyphicon glyphicon-chevron-up"></span></div></a>
+
         <?php require_once("../includes/core/footer.php"); ?>
     </div>
-    
+
 </body></html>
