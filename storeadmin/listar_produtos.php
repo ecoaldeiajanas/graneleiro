@@ -124,6 +124,7 @@ $(function() {
 	        "iDisplayLength": 10,
 	        "sAjaxSource": "../ajax/aj_getProdutos.php",
 	        "fnInitComplete": function(oSettings, json) {
+	        	console.log(json);
 				 ////////////////////Details/////////////////
 	        	$(".imgPreviewBut1").live('click',function(){
 	        		if($(this).next().is(":visible")){
@@ -231,7 +232,9 @@ $(function() {
 			var certBioChecked = (pointer.html()=="Biológico");
 			var convBioChecked = (pointer.html()=="Conversão-Bio");
 			var permaChecked = (pointer.html()=="Orgânico");
-			var protintChecked = (pointer.html()=="Tradicional");
+			var protintChecked = (pointer.html()=="Integrada​");
+			var protradChecked = (pointer.html()=="Tradicional");
+			var prodconvChecked = (pointer.html()=="Convencional");
 			
 			pointer = pointer.next();
 			var stockChecked = (pointer.html()=="Sim");
@@ -260,6 +263,8 @@ $(function() {
 				find("#convBio").prop('checked',convBioChecked);
 		    	find("#perma").prop('checked',permaChecked);
 		    	find("#protint").prop('checked',protintChecked);
+		    	find("#protrad").prop('checked',protradChecked);
+		    	find("#prodconv").prop('checked',prodconvChecked);
 				
 				
 		    	find(".currentImage").css("display","block").find("img").attr("src",imagem);
@@ -406,10 +411,11 @@ $(function() {
 			<div class="checkboxFormat">
 				
                 <input type="checkbox" id="certBio" name="b"/><label for="certBio" class="inline">Certificação Biológica</label><br>
-                <input type="checkbox" id="convBio" name="c"/><label for="convBio" class="inline">Converção Biológico</label><br>
-				<input type="checkbox" id="perma" name="p"/><label for="perma" class="inline">Produto Orgânico</label><br>
-				<input type="checkbox" id="protint" name="prot"/><label for="protint" class="inline">Protecção Integrada ou Tradicional
-</label>
+				<input type="checkbox" id="convBio" name="c"/><label for="convBio" class="inline">Conversão para Biológico Certificado</label><br>
+				<input type="checkbox" id="perma" name="p"/><label for="perma" class="inline">Produto Orgânico (pequeno produtor e de confiança)</label><br>
+				<input type="checkbox" id="protint" name="prot"/><label for="protint" class="inline">Protecção Integrada​</label><br>
+				<input type="checkbox" id="protrad" name="protrad"/><label for="protrad" class="inline">Produto Tradicional</label><br>
+				<input type="checkbox" id="prodconv" name="prodconv"/><label for="prodconv" class="inline">Produto Convencional (selecção)</label>
 			</div>
 		<div>
 			<label for="email">Preço</label><br/>
@@ -475,7 +481,7 @@ Ex( Alface, abobora, mólho de Salsa, mólho de Manjericão, etc ...)"/>
 	<button id="editProdutoBut" class="edBut">Modificar</button>
 	<button id="deleteProdutoBut" class="delBut">Remover</button>
 </div>
-        <h2>Lista de Produtos</h2><hr/>       		
+        <h2>Lista de Produtos</h2><a class="" href="exportar_produtos_excel.php">EXCEL</a><hr/>       		
 				<table cellpadding="0" cellspacing="0" border="0" class="display" id="produtos" width="100%">
     <thead>
         <tr>

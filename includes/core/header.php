@@ -30,7 +30,7 @@
 	    echo "<script type='text/javascript' src='$filename'></script>";
 	} 
 ?>
-
+<script type="text/javascript" src="../js/app.js"></script>
 <?php
 	//require_once("includes/database.php");
 	//require_once("includes/dialogs.php");
